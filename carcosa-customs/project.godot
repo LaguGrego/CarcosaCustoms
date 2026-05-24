@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Carcosa Customs"
-run/main_scene="uid://cxiuoo5uervvs"
+run/main_scene="uid://cvrj031d2ov28"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

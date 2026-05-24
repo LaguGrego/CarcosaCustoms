@@ -1,11 +1,13 @@
-extends Button
+extends Area2D
 
+@export var cursor_texture: Texture2D
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	input_pickable = true
+	self.input_event.connect(_on_input_event)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			
+			Input.set_custom_mouse_cursor(cursor_texture)
