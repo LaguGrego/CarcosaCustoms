@@ -1,0 +1,292 @@
+[gd_scene format=3 uid="uid://dghlwpp7v1lwg"]
+
+[ext_resource type="Texture2D" uid="uid://d1n2ymc2jgajk" path="res://photo_5179383852495998227_y.jpg" id="1_gmdr2"]
+[ext_resource type="Texture2D" uid="uid://cj4q1tmyc4w7o" path="res://Luggage_red.png" id="1_x3msl"]
+[ext_resource type="Script" uid="uid://bd1x4cfr0j5hj" path="res://luggage.gd" id="2_mwjvw"]
+[ext_resource type="Script" uid="uid://cvpr1xr2ct44m" path="res://timer_canva.gd" id="2_rd02i"]
+[ext_resource type="Texture2D" uid="uid://corvy5wgnkoqc" path="res://Luggage_green.png" id="2_tp0g4"]
+[ext_resource type="Script" uid="uid://6jd5vn2lp0l1" path="res://label.gd" id="3_3yuqv"]
+[ext_resource type="Texture2D" uid="uid://dx7r8abmif4q3" path="res://Luggage_brown.png" id="3_6wbnc"]
+[ext_resource type="Script" uid="uid://cy5ugpel5dydj" path="res://tool_1.gd" id="4_2eknb"]
+[ext_resource type="Texture2D" uid="uid://cojuiig1yh3vy" path="res://Luggage_blue.png" id="4_7f53m"]
+[ext_resource type="Texture2D" uid="uid://cj76rq1m0dpyw" path="res://Tool1_ph.png" id="5_6u6vn"]
+[ext_resource type="Texture2D" uid="uid://ca8o66dcqygoy" path="res://Luggage_black.png" id="5_81cyo"]
+[ext_resource type="Script" uid="uid://bxfqkd8tvxcju" path="res://tool_2.gd" id="6_vig2f"]
+[ext_resource type="Texture2D" uid="uid://bcwymak70g6xm" path="res://Tool2_ph.png" id="7_mwjvw"]
+[ext_resource type="Script" uid="uid://oiuscm66on4c" path="res://button_approved.gd" id="8_mrkqs"]
+[ext_resource type="Script" uid="uid://ch4b4vhgy2d65" path="res://tool_3.gd" id="8_yw4l8"]
+[ext_resource type="Script" uid="uid://b11tnwwwoare6" path="res://button_denied.gd" id="9_lf0aj"]
+[ext_resource type="Texture2D" uid="uid://c5ex03f3snohx" path="res://Tool3_ph.png" id="9_mrkqs"]
+[ext_resource type="Script" uid="uid://dhhno5jujv7vo" path="res://tool_4.gd" id="10_lf0aj"]
+[ext_resource type="Texture2D" uid="uid://4bbwwp1afhs0" path="res://Tool4_ph.png" id="11_0oy2s"]
+[ext_resource type="Script" uid="uid://cossppyew1pa4" path="res://tool_5.gd" id="12_6n7if"]
+[ext_resource type="Texture2D" uid="uid://b2hvj1rwtv2uh" path="res://Tool5_ph.png" id="13_tri7a"]
+[ext_resource type="Script" uid="uid://dybyee5sss0ce" path="res://tool_6.gd" id="14_6h4y6"]
+[ext_resource type="Texture2D" uid="uid://bo2o0du6wyv13" path="res://Tool6_ph.png" id="15_3ucid"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yw4l8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_81cyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7f53m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6wbnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tp0g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_x3msl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_lf0aj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(314.25003, 179.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_0oy2s"]
+resource_name = "luggage_appear"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(314.25003, 179.5), Vector2(219, 322), Vector2(662, 324)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(0.9, 0.9)]
+}
+
+[sub_resource type="Animation" id="Animation_6n7if"]
+resource_name = "luggage_disappear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(662, 324), Vector2(1452, 333.00003)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tri7a"]
+_data = {
+&"RESET": SubResource("Animation_lf0aj"),
+&"luggage_appear": SubResource("Animation_0oy2s"),
+&"luggage_disappear": SubResource("Animation_6n7if")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfv6n"]
+size = Vector2(100.75, 93.5625)
+
+[node name="Carcosa Customs" type="Node2D" unique_id=1258786510]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1777674799]
+z_index = -4
+offset_right = 720.0
+offset_bottom = 476.0
+mouse_filter = 2
+texture = ExtResource("1_gmdr2")
+
+[node name="World" type="Node2D" parent="." unique_id=1062303425]
+
+[node name="Interactives" type="Node2D" parent="World" unique_id=264628376]
+
+[node name="Docs" type="Area2D" parent="World/Interactives" unique_id=55769499]
+
+[node name="Passanger" type="Area2D" parent="World/Interactives" unique_id=402030045]
+
+[node name="Luggage" type="Area2D" parent="World/Interactives" unique_id=915691002]
+script = ExtResource("2_mwjvw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="World/Interactives/Luggage" unique_id=1415830166]
+position = Vector2(314.25003, 179.5)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_yw4l8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="World/Interactives/Luggage" unique_id=1678837214]
+libraries/ = SubResource("AnimationLibrary_tri7a")
+
+[node name="Approved" type="Area2D" parent="World/Interactives" unique_id=1357328315]
+
+[node name="Button" type="Button" parent="World/Interactives/Approved" unique_id=279650797]
+offset_left = 507.0
+offset_top = 478.0
+offset_right = 590.0
+offset_bottom = 509.0
+text = "APROBAR"
+script = ExtResource("8_mrkqs")
+
+[node name="Denied" type="Area2D" parent="World/Interactives" unique_id=1287258631]
+
+[node name="Button" type="Button" parent="World/Interactives/Denied" unique_id=1042749903]
+offset_left = 763.0
+offset_top = 477.0
+offset_right = 876.0
+offset_bottom = 508.0
+text = "DESAPROBAR"
+script = ExtResource("9_lf0aj")
+
+[node name="Objetives" type="Area2D" parent="World/Interactives" unique_id=460384919]
+
+[node name="No_Interactives" type="Node2D" parent="World" unique_id=1770633659]
+
+[node name="Timer_canva" type="Node2D" parent="World/No_Interactives" unique_id=1093977544]
+script = ExtResource("2_rd02i")
+
+[node name="Label" type="Label" parent="World/No_Interactives/Timer_canva" unique_id=2022005672]
+offset_left = 120.0
+offset_top = 24.0
+offset_right = 160.0
+offset_bottom = 47.0
+script = ExtResource("3_3yuqv")
+
+[node name="Timer" type="Timer" parent="World/No_Interactives/Timer_canva" unique_id=739317293]
+wait_time = 4096.0
+
+[node name="ToolBox" type="Control" parent="." unique_id=1361854168]
+layout_mode = 3
+anchors_preset = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Tool1" type="Area2D" parent="ToolBox" unique_id=1849852125]
+script = ExtResource("4_2eknb")
+cursor_texture = ExtResource("5_6u6vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToolBox/Tool1" unique_id=1685590934]
+position = Vector2(179.5, 592.5)
+shape = SubResource("RectangleShape2D_rfv6n")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="ToolBox/Tool1" unique_id=2142840436]
+process_priority = 1
+position = Vector2(182, 591)
+texture = ExtResource("5_6u6vn")
+
+[node name="Tool2" type="Area2D" parent="ToolBox" unique_id=539083750]
+script = ExtResource("6_vig2f")
+cursor_texture = ExtResource("7_mwjvw")
+
+[node name="Sprite2D" type="Sprite2D" parent="ToolBox/Tool2" unique_id=495766564]
+position = Vector2(313, 594)
+texture = ExtResource("7_mwjvw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ToolBox/Tool2" unique_id=1083616478]
+position = Vector2(298, 591)
+shape = SubResource("RectangleShape2D_rfv6n")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+
+[node name="Tool3" type="Area2D" parent="ToolBox" unique_id=1037590589]
+script = ExtResource("8_yw4l8")
+cursor_texture = ExtResource("9_mrkqs")
+
+[node name="Sprite2D" type="Sprite2D" parent="ToolBox/Tool3" unique_id=1071294000]
+position = Vector2(422, 591)
+texture = ExtResource("9_mrkqs")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="ToolBox/Tool3" unique_id=1678507459]
+position = Vector2(416, 592)
+shape = SubResource("RectangleShape2D_rfv6n")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+
+[node name="Tool4" type="Area2D" parent="ToolBox" unique_id=1889882760]
+script = ExtResource("10_lf0aj")
+cursor_texture = ExtResource("11_0oy2s")
+
+[node name="Sprite2D" type="Sprite2D" parent="ToolBox/Tool4" unique_id=2130398932]
+position = Vector2(524, 595)
+texture = ExtResource("11_0oy2s")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="ToolBox/Tool4" unique_id=1286391107]
+position = Vector2(531, 592)
+shape = SubResource("RectangleShape2D_rfv6n")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+
+[node name="Tool5" type="Area2D" parent="ToolBox" unique_id=1644799980]
+script = ExtResource("12_6n7if")
+cursor_texture = ExtResource("13_tri7a")
+
+[node name="Sprite2D" type="Sprite2D" parent="ToolBox/Tool5" unique_id=1109380848]
+position = Vector2(644, 593)
+texture = ExtResource("13_tri7a")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="ToolBox/Tool5" unique_id=2140570132]
+position = Vector2(637, 590.78125)
+shape = SubResource("RectangleShape2D_rfv6n")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+
+[node name="Tool6" type="Area2D" parent="ToolBox" unique_id=2045743069]
+script = ExtResource("14_6h4y6")
+cursor_texture = ExtResource("15_3ucid")
+
+[node name="Sprite2D" type="Sprite2D" parent="ToolBox/Tool6" unique_id=717659914]
+position = Vector2(759, 594)
+texture = ExtResource("15_3ucid")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="ToolBox/Tool6" unique_id=2116716275]
+position = Vector2(751, 590)
+shape = SubResource("RectangleShape2D_rfv6n")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+
+[node name="Canvas" type="CanvasLayer" parent="." unique_id=993322582]
+
+[node name="Screens" type="Control" parent="Canvas" unique_id=44376712]
+layout_mode = 3
+anchors_preset = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Passanger" type="Node2D" parent="Canvas/Screens" unique_id=1175072997]
+
+[node name="Luggage" type="Node2D" parent="Canvas/Screens" unique_id=216350833]
+
+[node name="Objetives" type="Node2D" parent="Canvas/Screens" unique_id=1929488832]
+
+[node name="Docs" type="Node2D" parent="Canvas/Screens" unique_id=734381586]

@@ -1,1 +1,8 @@
 res://carcosa_customs.tscn
+res://label.gd
+res://timer_canva.gd
+res://animated_sprite_2d.gd
+res://luggage.gd
+res://button.gd
+res://button_approved.gd
+res://button_denied.gd

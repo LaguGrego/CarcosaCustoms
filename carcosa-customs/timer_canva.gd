@@ -7,5 +7,8 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+var tiempo := 0.0
+
+func _process(delta):
+	tiempo += delta
+	$Label.text = str(round(tiempo))
