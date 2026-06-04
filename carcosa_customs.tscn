@@ -172,7 +172,7 @@ sprite_frames = SubResource("SpriteFrames_yw4l8")
 libraries/ = SubResource("AnimationLibrary_tri7a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Interactives/Luggage" unique_id=1341088152]
-position = Vector2(636, 267)
+position = Vector2(639, 307)
 scale = Vector2(1, -0.27999997)
 shape = SubResource("RectangleShape2D_bx2bl")
 script = ExtResource("8_sds8p")
@@ -198,6 +198,8 @@ text = "DESAPROBAR"
 script = ExtResource("9_lf0aj")
 
 [node name="Objetives" type="Area2D" parent="World/Interactives" unique_id=460384919]
+
+[node name="Area2D" type="Area2D" parent="World/Interactives" unique_id=2108337305]
 
 [node name="No_Interactives" type="Node2D" parent="World" unique_id=1770633659]
 
