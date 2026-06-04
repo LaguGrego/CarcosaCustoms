@@ -1,11 +1,14 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779660358
-button.gd::GDScript::6408950031046858863::1779655151::0::1::::<>Button<><>0<>0<><>::
+::res://::1780605848
+animated_sprite_2d.gd::GDScript::3558075057984782727::1779660575::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+button.gd::GDScript::6408950031046858863::1779663068::0::1::::<>RefCounted<><>0<>0<><>::
 button.png::CompressedTexture2D::6542353116434914064::1779655151::1779655151::1::::<><><>0<>0<>dd3c8b501e8b3aa7d5dd4990b274842e<>res://.godot/imported/button.png-234620e182281afdeb4aab4d2ed4f8a7.ctex::
-Carcosa_customs.tscn::PackedScene::784958912201327928::1779656047::0::1::::<><><>0<>0<><>::uid://d1n2ymc2jgajk::::res://photo_5179383852495998227_y.jpg<>uid://cvpr1xr2ct44m::::res://timer_canva.gd<>uid://cy5ugpel5dydj::::res://tool_1.gd<>uid://cj76rq1m0dpyw::::res://Tool1_ph.png<>uid://6jd5vn2lp0l1::::res://label.gd<>uid://bxfqkd8tvxcju::::res://tool_2.gd<>uid://ch4b4vhgy2d65::::res://tool_3.gd<>uid://bcwymak70g6xm::::res://Tool2_ph.png<>uid://dhhno5jujv7vo::::res://tool_4.gd<>uid://c5ex03f3snohx::::res://Tool3_ph.png<>uid://cossppyew1pa4::::res://tool_5.gd<>uid://dybyee5sss0ce::::res://tool_6.gd<>uid://bo2o0du6wyv13::::res://Tool6_ph.png<>uid://4bbwwp1afhs0::::res://Tool4_ph.png<>uid://b2hvj1rwtv2uh::::res://Tool5_ph.png
-carcosa_customs.tscn::PackedScene::6282494114378100619::1779658578::0::1::::<><><>0<>0<><>::uid://lgifnlu6kyvo::::res://Carcosa_customs.tscn
+button_approved.gd::GDScript::1000405442145393104::1779664319::0::1::::<>Button<><>0<>0<><>::
+button_denied.gd::GDScript::4266182468588531851::1779664182::0::1::::<>Button<><>0<>0<><>::
+carcosa_customs.tscn::PackedScene::7595553744077605118::1779664390::0::1::::<><><>0<>0<><>::uid://d1n2ymc2jgajk::::res://photo_5179383852495998227_y.jpg<>uid://cj4q1tmyc4w7o::::res://Luggage_red.png<>uid://bd1x4cfr0j5hj::::res://luggage.gd<>uid://cvpr1xr2ct44m::::res://timer_canva.gd<>uid://corvy5wgnkoqc::::res://Luggage_green.png<>uid://6jd5vn2lp0l1::::res://label.gd<>uid://dx7r8abmif4q3::::res://Luggage_brown.png<>uid://cy5ugpel5dydj::::res://tool_1.gd<>uid://cojuiig1yh3vy::::res://Luggage_blue.png<>uid://cj76rq1m0dpyw::::res://Tool1_ph.png<>uid://ca8o66dcqygoy::::res://Luggage_black.png<>uid://bxfqkd8tvxcju::::res://tool_2.gd<>uid://bcwymak70g6xm::::res://Tool2_ph.png<>uid://oiuscm66on4c::::res://button_approved.gd<>uid://ch4b4vhgy2d65::::res://tool_3.gd<>uid://b11tnwwwoare6::::res://button_denied.gd<>uid://c5ex03f3snohx::::res://Tool3_ph.png<>uid://dhhno5jujv7vo::::res://tool_4.gd<>uid://4bbwwp1afhs0::::res://Tool4_ph.png<>uid://cossppyew1pa4::::res://tool_5.gd<>uid://b2hvj1rwtv2uh::::res://Tool5_ph.png<>uid://dybyee5sss0ce::::res://tool_6.gd<>uid://bo2o0du6wyv13::::res://Tool6_ph.png
 icon.svg::CompressedTexture2D::8277634694913075240::1779655151::1779656086::1::::<><><>0<>0<>3e7dfcbff14ae5f898b5f603d2d686f7<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 label.gd::GDScript::2194670401675873596::1779657196::0::1::::<>Label<><>0<>0<><>::
+luggage.gd::GDScript::2652109428646544679::1779664390::0::1::::<>Area2D<><>0<>0<><>::
 Luggage.png::CompressedTexture2D::1242166661626264295::1779657899::1779658323::1::::<><><>0<>0<>d492f31b3ff11a0da7706b84cd8e865a<>res://.godot/imported/Luggage.png-3fcffc8823729db94dc57059285b1a8a.ctex::
 Luggage_black.png::CompressedTexture2D::4841872863751427660::1779660358::1779660359::1::::<><><>0<>0<>75a96e4c3b3f7edef42c84afdd93f866<>res://.godot/imported/Luggage_black.png-63ae1d06ffcba32634c87443bee5df80.ctex::
 Luggage_blue.png::CompressedTexture2D::5775293634981090890::1779660358::1779660359::1::::<><><>0<>0<>52674d3dedf2ff3529ded10036ec8bd1<>res://.godot/imported/Luggage_blue.png-eefdca5b068046daf83f0bc41c46962e.ctex::
@@ -16,7 +19,6 @@ menu_button.gd::GDScript::679198484352995482::1779655151::0::1::::<>MenuButton<>
 mi_robot2.gd::GDScript::1743057628018639071::1779655151::0::1::::<>Sprite2D<><>0<>0<><>::
 mi_robot.gd::GDScript::5948517432750621516::1779655151::0::1::::<>Sprite2D<><>0<>0<><>::
 photo_5179383852495998227_y.jpg::CompressedTexture2D::9012691748938164444::1779655151::1779655151::1::::<><><>0<>0<>7679ad3b4455951704e943f4fb67ea57<>res://.godot/imported/photo_5179383852495998227_y.jpg-88977af3f289861051685eacf28d6650.ctex::
-animated_sprite_2d.gd::GDScript::3558075057984782727::1779658612::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 timer_canva.gd::GDScript::6278852605143274802::1779656689::0::1::::<>Node2D<><>0<>0<><>::
 Tool1_ph.png::CompressedTexture2D::5472514514647836714::1779655426::1779655426::1::::<><><>0<>0<>ab0190b97d9cf287764d1feafdb3838c<>res://.godot/imported/Tool1_ph.png-8b3a349a64a79cbfe5180691342ff911.ctex::
 Tool2_ph.png::CompressedTexture2D::2573693335847393366::1779655426::1779655426::1::::<><><>0<>0<>29ec7afce38734ef62ebb0d755db8a67<>res://.godot/imported/Tool2_ph.png-56a176678b76a0c4b73144d6a08f98a8.ctex::
