@@ -1,0 +1,9 @@
+Node2D
+Button
+AnimationPlayer
+AnimatedSprite2D
+TextureRect
+Label
+Timer
+CollisionShape2D
+Sprite2D
