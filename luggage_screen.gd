@@ -27,6 +27,8 @@ func set_luggage_content_type(luggage_code: int):
 			print('wtf')
 			print(luggage_code)
 			
+	$SpawnContainer.set_luggage_type(luggage_code)
+			
 func clear_lugage_inside_window() -> void:
 	$Black/BlackInsideSprite.visible = 0
 	$Blue/BlueInsideSprite.visible = 0

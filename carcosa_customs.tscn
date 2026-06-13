@@ -16,18 +16,34 @@
 [ext_resource type="Script" uid="uid://ch4b4vhgy2d65" path="res://tool_3.gd" id="8_yw4l8"]
 [ext_resource type="Script" uid="uid://b11tnwwwoare6" path="res://button_denied.gd" id="9_lf0aj"]
 [ext_resource type="Script" uid="uid://dhhno5jujv7vo" path="res://tool_4.gd" id="10_lf0aj"]
+[ext_resource type="Script" uid="uid://7vs7fvnbrtiq" path="res://belonging.gd" id="11_d6dqt"]
 [ext_resource type="Script" uid="uid://cossppyew1pa4" path="res://tool_5.gd" id="12_6n7if"]
+[ext_resource type="Texture2D" uid="uid://bnf5efjgsfpt" path="res://belongings/alien.png" id="12_nsioe"]
 [ext_resource type="Texture2D" uid="uid://ci6iwb4vscglx" path="res://T1_lupa_pointer .png" id="13_3ucid"]
+[ext_resource type="Texture2D" uid="uid://cw017td876run" path="res://belongings/camara.png" id="13_krnur"]
 [ext_resource type="Texture2D" uid="uid://dqtc50vyit3na" path="res://T1_lupa.png" id="14_3ucid"]
 [ext_resource type="Script" uid="uid://dybyee5sss0ce" path="res://tool_6.gd" id="14_6h4y6"]
+[ext_resource type="Texture2D" uid="uid://ddduxi4xhxbc7" path="res://belongings/cinta.png" id="14_vw5ed"]
 [ext_resource type="Texture2D" uid="uid://bo2o0du6wyv13" path="res://Tool6_ph.png" id="15_3ucid"]
+[ext_resource type="Texture2D" uid="uid://8ut1vlrbfcwf" path="res://belongings/cortapluma.png" id="15_htv0q"]
 [ext_resource type="Texture2D" uid="uid://bx5olk135326j" path="res://T2_uv_pointer.png" id="16_b7hie"]
+[ext_resource type="Texture2D" uid="uid://pgihph6ab6qh" path="res://belongings/dron.png" id="16_m1rvv"]
+[ext_resource type="Texture2D" uid="uid://br8pnijlwmlhk" path="res://belongings/gallesita.png" id="17_1f5gu"]
 [ext_resource type="Texture2D" uid="uid://dsxsnkk6tfs40" path="res://T2_uv.png" id="17_b7hie"]
+[ext_resource type="Texture2D" uid="uid://cotl1iv224bbb" path="res://belongings/gorra.png" id="18_54t5d"]
+[ext_resource type="Texture2D" uid="uid://bibq2dmmdsaer" path="res://belongings/harina.png" id="19_dhwip"]
 [ext_resource type="Texture2D" uid="uid://3lh3uln0k8eb" path="res://T3_detector_pointer.png" id="19_r8l48"]
+[ext_resource type="Texture2D" uid="uid://bkuea031tvjyr" path="res://belongings/libro.png" id="20_dasqe"]
 [ext_resource type="Texture2D" uid="uid://d1nw4068327ti" path="res://T3_detector.png" id="20_r8l48"]
+[ext_resource type="Texture2D" uid="uid://beviesectl6eb" path="res://belongings/lingote.png" id="21_yvmmo"]
 [ext_resource type="Texture2D" uid="uid://b5ehrjdnc0cub" path="res://T4_lector_docu_pointer.png" id="22_3ucid"]
+[ext_resource type="Texture2D" uid="uid://ctn3ehefytpkn" path="res://belongings/patipipa.png" id="22_5kvcd"]
 [ext_resource type="Texture2D" uid="uid://426pbbhafjol" path="res://T4_lector_docu.png" id="23_5730w"]
+[ext_resource type="Texture2D" uid="uid://de4lpn6qati1o" path="res://belongings/Sombrero.png" id="23_o5aqn"]
+[ext_resource type="Texture2D" uid="uid://fd1cutvdijvv" path="res://belongings/table.png" id="24_6jyx8"]
+[ext_resource type="Texture2D" uid="uid://b4mo3jclj7aq6" path="res://belongings/termo.png" id="25_3b03b"]
 [ext_resource type="Texture2D" uid="uid://1qhnpu5jxwt3" path="res://T5_sustancia_pointer.png" id="25_b7hie"]
+[ext_resource type="Texture2D" uid="uid://dene4sde1s7t7" path="res://belongings/zapatillas.png" id="26_1tcww"]
 [ext_resource type="Texture2D" uid="uid://md0d8ufasnfd" path="res://T5_sustancia.png" id="26_g5a0j"]
 [ext_resource type="Texture2D" uid="uid://bgaj2qpr10vca" path="res://T6_radio.png" id="29_rhkjj"]
 [ext_resource type="Texture2D" uid="uid://b580ec0uy13i7" path="res://Luggage_blue_opened.png" id="30_rhkjj"]
@@ -36,6 +52,8 @@
 [ext_resource type="Texture2D" uid="uid://dgjg80yoxfyg6" path="res://Luggage_black_opened.png" id="32_bx2bl"]
 [ext_resource type="Texture2D" uid="uid://bobumdy3m6lmj" path="res://Luggage_red_opened.png" id="33_fhwes"]
 [ext_resource type="Texture2D" uid="uid://bqyy24y16aiyv" path="res://Luggage_green_opened.png" id="34_ddgck"]
+[ext_resource type="Script" uid="uid://dpjstxljyqq2e" path="res://luggage_generator.gd" id="37_fhwes"]
+[ext_resource type="Script" uid="uid://5qmsk1j8si3g" path="res://spawn_container.gd" id="38_euydn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yw4l8"]
 animations = [{
@@ -87,6 +105,9 @@ tracks/1/keys = {
 "values": [Vector2(0.5, 0.5)]
 }
 
+[sub_resource type="Animation" id="Animation_hm451"]
+resource_name = "belongings"
+
 [sub_resource type="Animation" id="Animation_0oy2s"]
 resource_name = "luggage_appear"
 length = 4.0
@@ -133,6 +154,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tri7a"]
 _data = {
 &"RESET": SubResource("Animation_lf0aj"),
+&"belongings": SubResource("Animation_hm451"),
 &"luggage_appear": SubResource("Animation_0oy2s"),
 &"luggage_disappear": SubResource("Animation_6n7if")
 }
@@ -140,8 +162,75 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bx2bl"]
 size = Vector2(298.5, 937.8572)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_uhy0n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_nsioe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_krnur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vw5ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_htv0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_m1rvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1f5gu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_54t5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_dhwip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dasqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_yvmmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5kvcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_o5aqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_6jyx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3b03b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_1tcww")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d6dqt"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfv6n"]
 size = Vector2(140.375, 135.78125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gd5ij"]
+size = Vector2(337, 348)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vx7ia"]
+size = Vector2(391.5, 301)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uws72"]
+size = Vector2(338.5, 317.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rghdx"]
+size = Vector2(375.9225, 267.5)
 
 [node name="Carcosa Customs" type="Node2D" unique_id=1258786510]
 
@@ -172,6 +261,7 @@ sprite_frames = SubResource("SpriteFrames_yw4l8")
 libraries/ = SubResource("AnimationLibrary_tri7a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Interactives/Luggage" unique_id=1341088152]
+visible = false
 position = Vector2(639, 307)
 scale = Vector2(1, -0.27999997)
 shape = SubResource("RectangleShape2D_bx2bl")
@@ -199,7 +289,14 @@ script = ExtResource("9_lf0aj")
 
 [node name="Objetives" type="Area2D" parent="World/Interactives" unique_id=460384919]
 
-[node name="Area2D" type="Area2D" parent="World/Interactives" unique_id=2108337305]
+[node name="Belonging" type="Area2D" parent="World/Interactives" unique_id=2108337305]
+script = ExtResource("11_d6dqt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="World/Interactives/Belonging" unique_id=1503612569]
+sprite_frames = SubResource("SpriteFrames_uhy0n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Interactives/Belonging" unique_id=1094537132]
+shape = SubResource("RectangleShape2D_d6dqt")
 
 [node name="No_Interactives" type="Node2D" parent="World" unique_id=1770633659]
 
@@ -332,9 +429,9 @@ script = ExtResource("31_bx2bl")
 
 [node name="BlueInsideSprite" type="Sprite2D" parent="Canvas/Screens/Luggage/Blue" unique_id=418627448]
 visible = false
-position = Vector2(636, 293)
+position = Vector2(665, 300.00003)
 rotation = 1.5707964
-scale = Vector2(1.505, 1.505)
+scale = Vector2(1.7025375, 1.6803414)
 texture = ExtResource("30_rhkjj")
 
 [node name="Brown" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=1511128684]
@@ -348,17 +445,18 @@ texture = ExtResource("31_sds8p")
 
 [node name="BlackInsideSprite" type="Sprite2D" parent="Canvas/Screens/Luggage/Black" unique_id=1607427869]
 visible = false
-position = Vector2(639, 283)
+position = Vector2(688, 279.00003)
 rotation = 1.5707964
-scale = Vector2(1.5, 1.5)
+scale = Vector2(1.8109592, 1.7787302)
 texture = ExtResource("32_bx2bl")
 
 [node name="Red" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=39734544]
 
 [node name="RedInsideSprite" type="Sprite2D" parent="Canvas/Screens/Luggage/Red" unique_id=1145721193]
 visible = false
-position = Vector2(633, 249)
-scale = Vector2(1.34, 1.34)
+position = Vector2(716.4538, 295.1191)
+rotation = 1.5707964
+scale = Vector2(1.812503, 1.8524029)
 texture = ExtResource("33_fhwes")
 
 [node name="Green" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=1022392662]
@@ -368,6 +466,46 @@ visible = false
 position = Vector2(620, 262)
 scale = Vector2(1.305, 1.305)
 texture = ExtResource("34_ddgck")
+
+[node name="LuggageGenerator" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=1199828304]
+script = ExtResource("37_fhwes")
+
+[node name="SpawnContainer" type="Area2D" parent="Canvas/Screens/Luggage" unique_id=1492816278]
+script = ExtResource("38_euydn")
+
+[node name="AreaGreen" type="Area2D" parent="Canvas/Screens/Luggage/SpawnContainer" unique_id=913174690]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canvas/Screens/Luggage/SpawnContainer/AreaGreen" unique_id=843772676]
+visible = false
+position = Vector2(621, 248)
+shape = SubResource("RectangleShape2D_gd5ij")
+
+[node name="AreaBlue" type="Area2D" parent="Canvas/Screens/Luggage/SpawnContainer" unique_id=1698260894]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canvas/Screens/Luggage/SpawnContainer/AreaBlue" unique_id=563290208]
+visible = false
+position = Vector2(611.25, 311.5)
+shape = SubResource("RectangleShape2D_vx7ia")
+
+[node name="AreaRed" type="Area2D" parent="Canvas/Screens/Luggage/SpawnContainer" unique_id=1614004212]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canvas/Screens/Luggage/SpawnContainer/AreaRed" unique_id=47489225]
+position = Vector2(647, 294.6875)
+shape = SubResource("RectangleShape2D_uws72")
+
+[node name="AreaBlack" type="Area2D" parent="Canvas/Screens/Luggage/SpawnContainer" unique_id=1653573528]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canvas/Screens/Luggage/SpawnContainer/AreaBlack" unique_id=507020492]
+visible = false
+position = Vector2(622.03876, 273.75)
+shape = SubResource("RectangleShape2D_rghdx")
+
+[node name="AreaBrown" type="Area2D" parent="Canvas/Screens/Luggage/SpawnContainer" unique_id=1364241200]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canvas/Screens/Luggage/SpawnContainer/AreaBrown" unique_id=3402573]
+visible = false
+position = Vector2(622.03876, 273.75)
+shape = SubResource("RectangleShape2D_rghdx")
 
 [node name="Objetives" type="Node2D" parent="Canvas/Screens" unique_id=1929488832]
 

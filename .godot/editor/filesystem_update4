@@ -1,8 +1,0 @@
-res://carcosa_customs.tscn
-res://collision_shape_2d.gd
-res://area_2d.gd
-res://luggage_collision_shape.gd
-res://luggage.gd
-res://luggage_screen.gd
-res://button_approved.gd
-res://button_denied.gd
