@@ -29,6 +29,10 @@
 [ext_resource type="Texture2D" uid="uid://1qhnpu5jxwt3" path="res://T5_sustancia_pointer.png" id="25_b7hie"]
 [ext_resource type="Texture2D" uid="uid://md0d8ufasnfd" path="res://T5_sustancia.png" id="26_g5a0j"]
 [ext_resource type="Texture2D" uid="uid://bgaj2qpr10vca" path="res://T6_radio.png" id="29_rhkjj"]
+[ext_resource type="Script" uid="uid://cnv4r2t8l45h2" path="res://screen_luggage.gd" id="30_5730w"]
+[ext_resource type="Script" uid="uid://5qmsk1j8si3g" path="res://spawn_container.gd" id="30_b7hie"]
+[ext_resource type="Texture2D" uid="uid://b580ec0uy13i7" path="res://Luggage_blue_opened.png" id="31_g5a0j"]
+[ext_resource type="Script" uid="uid://dpjstxljyqq2e" path="res://luggage_generator.gd" id="31_r8l48"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yw4l8"]
 animations = [{
@@ -130,8 +134,14 @@ _data = {
 &"luggage_disappear": SubResource("Animation_6n7if")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5730w"]
+size = Vector2(202, 234)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfv6n"]
 size = Vector2(140.375, 135.78125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8l48"]
+size = Vector2(382.5, 326)
 
 [node name="Carcosa Customs" type="Node2D" unique_id=1258786510]
 
@@ -160,6 +170,10 @@ sprite_frames = SubResource("SpriteFrames_yw4l8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="World/Interactives/Luggage" unique_id=1678837214]
 libraries/ = SubResource("AnimationLibrary_tri7a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Interactives/Luggage" unique_id=500671646]
+position = Vector2(688, 272)
+shape = SubResource("RectangleShape2D_5730w")
 
 [node name="Approved" type="Area2D" parent="World/Interactives" unique_id=1357328315]
 
@@ -308,16 +322,30 @@ metadata/_edit_use_anchors_ = true
 [node name="Passanger" type="Node2D" parent="Canvas/Screens" unique_id=1175072997]
 
 [node name="Luggage" type="Node2D" parent="Canvas/Screens" unique_id=216350833]
+script = ExtResource("30_5730w")
 
-[node name="Blue" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=581577572]
+[node name="Blue" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=574428427]
 
-[node name="Brown" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=1511128684]
+[node name="BlueInsideSprite" type="Sprite2D" parent="Canvas/Screens/Luggage/Blue" unique_id=1154112738]
+visible = false
+position = Vector2(643.94617, 235.13641)
+rotation = -1.5707964
+scale = Vector2(1.7743794, 1.6237975)
+texture = ExtResource("31_g5a0j")
 
-[node name="Black" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=1073603643]
+[node name="SpawnContainer" type="Area2D" parent="Canvas/Screens/Luggage" unique_id=1789330217]
+script = ExtResource("30_b7hie")
 
-[node name="Red" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=39734544]
+[node name="AreaBlue" type="Area2D" parent="Canvas/Screens/Luggage/SpawnContainer" unique_id=541819614]
+collision_layer = 0
 
-[node name="Green" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=1022392662]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canvas/Screens/Luggage/SpawnContainer/AreaBlue" unique_id=1838669567]
+position = Vector2(695.25, 227)
+shape = SubResource("RectangleShape2D_r8l48")
+
+[node name="LuggageGenerator" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=1417657117]
+script = ExtResource("31_r8l48")
+item_textures = Array[Texture2D]([ExtResource("16_b7hie"), ExtResource("13_3ucid"), ExtResource("19_r8l48")])
 
 [node name="Objetives" type="Node2D" parent="Canvas/Screens" unique_id=1929488832]
 
