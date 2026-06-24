@@ -6,9 +6,10 @@ func _ready() -> void:
 	pickTexture()
 
 func pickTexture() -> void:
+	# 0: black , 1: blue , 2: brown , 3: green , 4: red
 	var luggage_types = Array($AnimatedSprite2D.sprite_frames.get_animation_names())
 	$AnimatedSprite2D.animation = luggage_types.pick_random()
-	$AnimatedSprite2D.frame = 1
+	$AnimatedSprite2D.frame = randi() % 5
 	$AnimationPlayer.play("luggage_appear")
 
 func _input_event(viewport, event, shape_idx):

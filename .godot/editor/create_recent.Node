@@ -1,10 +1,13 @@
 Sprite2D
-Node2D
+Label
+VBoxContainer
 CollisionShape2D
+SubViewportContainer
+VScrollBar
+Node2D
 Area2D
 Button
 AnimationPlayer
 AnimatedSprite2D
 TextureRect
-Label
 Timer

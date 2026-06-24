@@ -1,12 +1,12 @@
 class_name LuggageGenerator
 extends Node2D
 
-@export var grid_width := 20
-@export var grid_height := 20
+@export var grid_width := 10
+@export var grid_height := 10
 @export var item_textures: Array[Texture2D] = []
-@export var item_scale: float = 0.25
+@export var item_scale: float = 0.5
 @export var items_to_spawn := 8
-@export var max_attempts := 200
+@export var max_attempts := 2000
 @export var max_occupancy := 0.8
 
 var area: Area2D

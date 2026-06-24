@@ -42,22 +42,25 @@ class Belonging:
 	var scene: PackedScene
 	var size: Vector2
 	var position: Vector2
+	var z_index: int
 
 	func _init(
 		area: Rect2,
 		p_size: Vector2,
 		p_texture: Texture2D = null,
-		p_scene: PackedScene = null
+		p_scene: PackedScene = null,
+		p_z_index: int =0
 	) -> void:
 		texture = p_texture
 		scene = p_scene
-		size = p_size
+		z_index = p_z_index
+		size = Vector2(1,1)
 
 		var min_x := int(area.position.x)
 		var max_x: int = max(min_x, int(area.end.x - p_size.x))
 		var min_y := int(area.position.y)
 		var max_y: int = max(min_y, int(area.end.y - p_size.y))
-
+		
 		position = Vector2(
 			randi_range(min_x, max_x),
 			randi_range(min_y, max_y)
@@ -70,9 +73,10 @@ class Belonging:
 	## escena instanciada). El que llama solo necesita add_child().
 	func instantiate_node() -> Node2D:
 		var node: Node2D
-
+		
 		if texture != null:
 			var sprite := Sprite2D.new()
+			sprite.z_index = z_index
 			sprite.texture = texture
 			sprite.centered = false  # para que calce con la posición calculada
 			node = sprite
@@ -186,15 +190,15 @@ static func generate_random_belongings(
 		var item_size: Vector2 = item_data.get("size", Vector2.ZERO)
 
 		if item_size == Vector2.ZERO and texture != null:
-			item_size = texture.get_size()
-
-		var belonging := Belonging.new(area, item_size, texture, scene)
-
+			item_size = Vector2(2,2)
+		
+		var belonging := Belonging.new(area, item_size, texture, scene, created)
+		
 		if grid.can_place(belonging):
 			grid.place(belonging)
-			placed.append(belonging)
+			placed.push_front(belonging)
 			created += 1
-
+		
 		attempts += 1
-
+	
 	return placed

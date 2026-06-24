@@ -2,9 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://d1n2ymc2jgajk" path="res://photo_5179383852495998227_y.jpg" id="1_gmdr2"]
 [ext_resource type="Texture2D" uid="uid://cj4q1tmyc4w7o" path="res://Luggage_red.png" id="1_x3msl"]
+[ext_resource type="Script" uid="uid://ce88k3ahypbl2" path="res://docs.gd" id="2_iyc6x"]
 [ext_resource type="Script" uid="uid://bd1x4cfr0j5hj" path="res://luggage.gd" id="2_mwjvw"]
 [ext_resource type="Script" uid="uid://cvpr1xr2ct44m" path="res://timer_canva.gd" id="2_rd02i"]
 [ext_resource type="Texture2D" uid="uid://corvy5wgnkoqc" path="res://Luggage_green.png" id="2_tp0g4"]
+[ext_resource type="Texture2D" uid="uid://dsp3wty5kufhf" path="res://notepad.png" id="2_wwgtl"]
 [ext_resource type="Script" uid="uid://6jd5vn2lp0l1" path="res://label.gd" id="3_3yuqv"]
 [ext_resource type="Texture2D" uid="uid://dx7r8abmif4q3" path="res://Luggage_brown.png" id="3_6wbnc"]
 [ext_resource type="Script" uid="uid://cy5ugpel5dydj" path="res://tool_1.gd" id="4_2eknb"]
@@ -17,22 +19,42 @@
 [ext_resource type="Script" uid="uid://dhhno5jujv7vo" path="res://tool_4.gd" id="10_lf0aj"]
 [ext_resource type="Script" uid="uid://cossppyew1pa4" path="res://tool_5.gd" id="12_6n7if"]
 [ext_resource type="Texture2D" uid="uid://ci6iwb4vscglx" path="res://T1_lupa_pointer .png" id="13_3ucid"]
-[ext_resource type="Texture2D" uid="uid://dqtc50vyit3na" path="res://T1_lupa.png" id="14_3ucid"]
 [ext_resource type="Script" uid="uid://dybyee5sss0ce" path="res://tool_6.gd" id="14_6h4y6"]
 [ext_resource type="Texture2D" uid="uid://bo2o0du6wyv13" path="res://Tool6_ph.png" id="15_3ucid"]
 [ext_resource type="Texture2D" uid="uid://bx5olk135326j" path="res://T2_uv_pointer.png" id="16_b7hie"]
-[ext_resource type="Texture2D" uid="uid://dsxsnkk6tfs40" path="res://T2_uv.png" id="17_b7hie"]
 [ext_resource type="Texture2D" uid="uid://3lh3uln0k8eb" path="res://T3_detector_pointer.png" id="19_r8l48"]
-[ext_resource type="Texture2D" uid="uid://d1nw4068327ti" path="res://T3_detector.png" id="20_r8l48"]
 [ext_resource type="Texture2D" uid="uid://b5ehrjdnc0cub" path="res://T4_lector_docu_pointer.png" id="22_3ucid"]
-[ext_resource type="Texture2D" uid="uid://426pbbhafjol" path="res://T4_lector_docu.png" id="23_5730w"]
 [ext_resource type="Texture2D" uid="uid://1qhnpu5jxwt3" path="res://T5_sustancia_pointer.png" id="25_b7hie"]
-[ext_resource type="Texture2D" uid="uid://md0d8ufasnfd" path="res://T5_sustancia.png" id="26_g5a0j"]
-[ext_resource type="Texture2D" uid="uid://bgaj2qpr10vca" path="res://T6_radio.png" id="29_rhkjj"]
 [ext_resource type="Script" uid="uid://cnv4r2t8l45h2" path="res://screen_luggage.gd" id="30_5730w"]
 [ext_resource type="Script" uid="uid://5qmsk1j8si3g" path="res://spawn_container.gd" id="30_b7hie"]
 [ext_resource type="Texture2D" uid="uid://b580ec0uy13i7" path="res://Luggage_blue_opened.png" id="31_g5a0j"]
 [ext_resource type="Script" uid="uid://dpjstxljyqq2e" path="res://luggage_generator.gd" id="31_r8l48"]
+[ext_resource type="Texture2D" uid="uid://bbwop4sygnw7k" path="res://Luggage_brown_opened.png" id="32_fhwes"]
+[ext_resource type="Texture2D" uid="uid://dgjg80yoxfyg6" path="res://Luggage_black_opened.png" id="33_ddgck"]
+[ext_resource type="Texture2D" uid="uid://bobumdy3m6lmj" path="res://Luggage_red_opened.png" id="34_euydn"]
+[ext_resource type="Texture2D" uid="uid://bqyy24y16aiyv" path="res://Luggage_green_opened.png" id="35_e5niq"]
+[ext_resource type="Texture2D" uid="uid://ddduxi4xhxbc7" path="res://belongings/cinta.png" id="38_h6ndh"]
+[ext_resource type="Texture2D" uid="uid://br8pnijlwmlhk" path="res://belongings/gallesita.png" id="39_vk8fy"]
+[ext_resource type="Texture2D" uid="uid://dene4sde1s7t7" path="res://belongings/zapatillas.png" id="40_d6dqt"]
+[ext_resource type="Texture2D" uid="uid://beviesectl6eb" path="res://belongings/lingote.png" id="41_nsioe"]
+[ext_resource type="Texture2D" uid="uid://8ut1vlrbfcwf" path="res://belongings/cortapluma.png" id="42_krnur"]
+[ext_resource type="Texture2D" uid="uid://bkuea031tvjyr" path="res://belongings/libro.png" id="43_vw5ed"]
+[ext_resource type="Texture2D" uid="uid://cotl1iv224bbb" path="res://belongings/gorra.png" id="44_htv0q"]
+[ext_resource type="Texture2D" uid="uid://bibq2dmmdsaer" path="res://belongings/harina.png" id="45_m1rvv"]
+[ext_resource type="Texture2D" uid="uid://b4mo3jclj7aq6" path="res://belongings/termo.png" id="46_1f5gu"]
+[ext_resource type="Texture2D" uid="uid://fd1cutvdijvv" path="res://belongings/table.png" id="47_54t5d"]
+[ext_resource type="Texture2D" uid="uid://de4lpn6qati1o" path="res://belongings/Sombrero.png" id="48_dhwip"]
+[ext_resource type="Script" uid="uid://y3ksm6bbuvgf" path="res://screen_docs.gd" id="48_iyc6x"]
+[ext_resource type="Texture2D" uid="uid://dr3pntow2gx0e" path="res://gallesita.png" id="49_4faro"]
+[ext_resource type="Texture2D" uid="uid://bnf5efjgsfpt" path="res://belongings/alien.png" id="49_dasqe"]
+[ext_resource type="Texture2D" uid="uid://ctn3ehefytpkn" path="res://belongings/patipipa.png" id="50_yvmmo"]
+[ext_resource type="Texture2D" uid="uid://cw017td876run" path="res://belongings/camara.png" id="51_5kvcd"]
+[ext_resource type="Texture2D" uid="uid://pgihph6ab6qh" path="res://belongings/dron.png" id="52_o5aqn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydyr5"]
+size = Vector2(170.41278, 180.31226)
+
+[sub_resource type="GDScript" id="GDScript_4faro"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yw4l8"]
 animations = [{
@@ -52,7 +74,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_x3msl")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -137,11 +159,39 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5730w"]
 size = Vector2(202, 234)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6thr"]
+radius = 38.53833
+height = 161.79974
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fpsc"]
+size = Vector2(171.85016, 53.465286)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6ndh"]
+size = Vector2(197.66623, 50.88478)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p53p0"]
+size = Vector2(119.04031, 76.06442)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vk8fy"]
+size = Vector2(189.41193, 97.61197)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfv6n"]
-size = Vector2(140.375, 135.78125)
+size = Vector2(122.20596, 69.6393)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8l48"]
 size = Vector2(382.5, 326)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhwes"]
+size = Vector2(427, 239)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddgck"]
+size = Vector2(397, 302)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euydn"]
+size = Vector2(389, 342)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5niq"]
+size = Vector2(417, 370)
 
 [node name="Carcosa Customs" type="Node2D" unique_id=1258786510]
 
@@ -157,6 +207,20 @@ texture = ExtResource("1_gmdr2")
 [node name="Interactives" type="Node2D" parent="World" unique_id=264628376]
 
 [node name="Docs" type="Area2D" parent="World/Interactives" unique_id=55769499]
+script = ExtResource("2_iyc6x")
+
+[node name="notepad_sprite" type="Sprite2D" parent="World/Interactives/Docs" unique_id=1496238546]
+position = Vector2(1128, 607.00006)
+rotation = 0.4834562
+scale = Vector2(0.3581543, 0.28955084)
+texture = ExtResource("2_wwgtl")
+
+[node name="notepad_CollisionShape2D" type="CollisionShape2D" parent="World/Interactives/Docs" unique_id=264249122]
+position = Vector2(1126.5, 602.00006)
+rotation = 0.7853982
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_ydyr5")
+script = SubResource("GDScript_4faro")
 
 [node name="Passanger" type="Area2D" parent="World/Interactives" unique_id=402030045]
 
@@ -172,26 +236,27 @@ sprite_frames = SubResource("SpriteFrames_yw4l8")
 libraries/ = SubResource("AnimationLibrary_tri7a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Interactives/Luggage" unique_id=500671646]
+visible = false
 position = Vector2(688, 272)
 shape = SubResource("RectangleShape2D_5730w")
 
 [node name="Approved" type="Area2D" parent="World/Interactives" unique_id=1357328315]
 
 [node name="Button" type="Button" parent="World/Interactives/Approved" unique_id=279650797]
-offset_left = 507.0
-offset_top = 478.0
-offset_right = 590.0
-offset_bottom = 509.0
+offset_left = 671.0
+offset_top = 668.0
+offset_right = 754.0
+offset_bottom = 699.0
 text = "APROBAR"
 script = ExtResource("8_mrkqs")
 
 [node name="Denied" type="Area2D" parent="World/Interactives" unique_id=1287258631]
 
 [node name="Button" type="Button" parent="World/Interactives/Denied" unique_id=1042749903]
-offset_left = 763.0
-offset_top = 477.0
-offset_right = 876.0
-offset_bottom = 508.0
+offset_left = 790.0
+offset_top = 666.0
+offset_right = 903.0
+offset_bottom = 697.0
 text = "DESAPROBAR"
 script = ExtResource("9_lf0aj")
 
@@ -223,14 +288,15 @@ cursor_texture = ExtResource("13_3ucid")
 
 [node name="Sprite2D" type="Sprite2D" parent="ToolBox/Tool1" unique_id=2142840436]
 process_priority = 1
-position = Vector2(188.8, 645.4)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("14_3ucid")
+position = Vector2(225, 556.00006)
+scale = Vector2(0.4306787, 0.41841856)
+texture = ExtResource("13_3ucid")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToolBox/Tool1" unique_id=1685590934]
-position = Vector2(186.94998, 644)
+position = Vector2(225.99998, 560)
+rotation = -1.1274827
 scale = Vector2(1.2, 1.2)
-shape = SubResource("RectangleShape2D_rfv6n")
+shape = SubResource("CapsuleShape2D_a6thr")
 debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 
 [node name="Tool2" type="Area2D" parent="ToolBox" unique_id=539083750]
@@ -238,14 +304,16 @@ script = ExtResource("6_vig2f")
 cursor_texture = ExtResource("16_b7hie")
 
 [node name="Sprite2D" type="Sprite2D" parent="ToolBox/Tool2" unique_id=495766564]
-position = Vector2(405.40002, 648)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("17_b7hie")
+position = Vector2(452.99997, 561)
+rotation = 0.17627825
+scale = Vector2(-0.44, 0.425)
+texture = ExtResource("16_b7hie")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="ToolBox/Tool2" unique_id=1083616478]
-position = Vector2(405.54996, 643.6)
+position = Vector2(445.31934, 565.9007)
+rotation = -0.3228859
 scale = Vector2(1.2, 1.2)
-shape = SubResource("RectangleShape2D_rfv6n")
+shape = SubResource("RectangleShape2D_1fpsc")
 debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 
 [node name="Tool3" type="Area2D" parent="ToolBox" unique_id=1037590589]
@@ -254,14 +322,16 @@ script = ExtResource("8_yw4l8")
 cursor_texture = ExtResource("19_r8l48")
 
 [node name="Sprite2D" type="Sprite2D" parent="ToolBox/Tool3" unique_id=1071294000]
-position = Vector2(468, 669.2)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("20_r8l48")
+position = Vector2(3, 669)
+rotation = -0.17453292
+scale = Vector2(0.5538282, 0.4463927)
+texture = ExtResource("19_r8l48")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="ToolBox/Tool3" unique_id=1678507459]
-position = Vector2(470.15002, 663.8)
+position = Vector2(8.358292, 669.5629)
+rotation = 0.24434611
 scale = Vector2(1.2, 1.2)
-shape = SubResource("RectangleShape2D_rfv6n")
+shape = SubResource("RectangleShape2D_h6ndh")
 debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 
 [node name="Tool4" type="Area2D" parent="ToolBox" unique_id=1889882760]
@@ -270,14 +340,15 @@ script = ExtResource("10_lf0aj")
 cursor_texture = ExtResource("22_3ucid")
 
 [node name="Sprite2D" type="Sprite2D" parent="ToolBox/Tool4" unique_id=2130398932]
-position = Vector2(669, 669.6)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("23_5730w")
+position = Vector2(319, 664)
+scale = Vector2(-0.403, 0.37)
+texture = ExtResource("22_3ucid")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="ToolBox/Tool4" unique_id=1286391107]
-position = Vector2(666.15, 664.19995)
-scale = Vector2(1.2, 1.2)
-shape = SubResource("RectangleShape2D_rfv6n")
+position = Vector2(319.99997, 661)
+rotation = -0.17627825
+scale = Vector2(-1.2, 1.2)
+shape = SubResource("RectangleShape2D_p53p0")
 debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 
 [node name="Tool5" type="Area2D" parent="ToolBox" unique_id=1644799980]
@@ -286,28 +357,29 @@ script = ExtResource("12_6n7if")
 cursor_texture = ExtResource("25_b7hie")
 
 [node name="Sprite2D" type="Sprite2D" parent="ToolBox/Tool5" unique_id=1109380848]
-position = Vector2(874.4, 664)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("26_g5a0j")
+position = Vector2(582, 570.00006)
+scale = Vector2(0.5786787, 0.49894106)
+texture = ExtResource("25_b7hie")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="ToolBox/Tool5" unique_id=2140570132]
-position = Vector2(872.55005, 662.6)
+position = Vector2(582.35284, 564)
 scale = Vector2(1.2, 1.2)
-shape = SubResource("RectangleShape2D_rfv6n")
+shape = SubResource("RectangleShape2D_vk8fy")
 debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 
 [node name="Tool6" type="Area2D" parent="ToolBox" unique_id=2045743069]
+visible = false
 position = Vector2(142, -18)
 script = ExtResource("14_6h4y6")
 cursor_texture = ExtResource("15_3ucid")
 
 [node name="Sprite2D" type="Sprite2D" parent="ToolBox/Tool6" unique_id=717659914]
-position = Vector2(1262.8, 667.2)
+position = Vector2(537, 690)
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("29_rhkjj")
+texture = ExtResource("42_krnur")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="ToolBox/Tool6" unique_id=2116716275]
-position = Vector2(1262.7626, 668.6906)
+position = Vector2(535, 688)
 scale = Vector2(1.2, 1.2)
 shape = SubResource("RectangleShape2D_rfv6n")
 debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
@@ -333,6 +405,41 @@ rotation = -1.5707964
 scale = Vector2(1.7743794, 1.6237975)
 texture = ExtResource("31_g5a0j")
 
+[node name="Brown" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=212771885]
+
+[node name="BrownInsideSprite" type="Sprite2D" parent="Canvas/Screens/Luggage/Brown" unique_id=699732029]
+visible = false
+position = Vector2(677, 260)
+scale = Vector2(1.2857141, 1.0262628)
+texture = ExtResource("32_fhwes")
+
+[node name="Black" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=350935714]
+
+[node name="BlackInsideSprite" type="Sprite2D" parent="Canvas/Screens/Luggage/Black" unique_id=164520464]
+visible = false
+position = Vector2(614, 236.00002)
+rotation = -1.5707964
+scale = Vector2(2.0560813, 1.8359143)
+texture = ExtResource("33_ddgck")
+
+[node name="Red" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=408254657]
+
+[node name="RedInsideSprite" type="Sprite2D" parent="Canvas/Screens/Luggage/Red" unique_id=1283234515]
+visible = false
+position = Vector2(616.8298, 235.13641)
+rotation = -1.5707964
+scale = Vector2(1.7743794, 1.9475578)
+texture = ExtResource("34_euydn")
+
+[node name="Green" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=1885234558]
+
+[node name="GreenInsideSprite" type="Sprite2D" parent="Canvas/Screens/Luggage/Green" unique_id=1299342434]
+visible = false
+position = Vector2(694, 238)
+rotation = -1.5707964
+scale = Vector2(1.3769723, 1.4469516)
+texture = ExtResource("35_e5niq")
+
 [node name="SpawnContainer" type="Area2D" parent="Canvas/Screens/Luggage" unique_id=1789330217]
 script = ExtResource("30_b7hie")
 
@@ -340,13 +447,72 @@ script = ExtResource("30_b7hie")
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Canvas/Screens/Luggage/SpawnContainer/AreaBlue" unique_id=1838669567]
+visible = false
 position = Vector2(695.25, 227)
 shape = SubResource("RectangleShape2D_r8l48")
 
+[node name="AreaBrown" type="Area2D" parent="Canvas/Screens/Luggage/SpawnContainer" unique_id=694636412]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canvas/Screens/Luggage/SpawnContainer/AreaBrown" unique_id=1351210497]
+visible = false
+position = Vector2(675.5, 296.5)
+shape = SubResource("RectangleShape2D_fhwes")
+
+[node name="AreaBlack" type="Area2D" parent="Canvas/Screens/Luggage/SpawnContainer" unique_id=1522694302]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canvas/Screens/Luggage/SpawnContainer/AreaBlack" unique_id=980521525]
+visible = false
+position = Vector2(683.5, 241)
+shape = SubResource("RectangleShape2D_ddgck")
+
+[node name="AreaRed" type="Area2D" parent="Canvas/Screens/Luggage/SpawnContainer" unique_id=155491095]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canvas/Screens/Luggage/SpawnContainer/AreaRed" unique_id=1818194843]
+visible = false
+position = Vector2(689.5, 240)
+shape = SubResource("RectangleShape2D_euydn")
+
+[node name="AreaGreen" type="Area2D" parent="Canvas/Screens/Luggage/SpawnContainer" unique_id=448185913]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canvas/Screens/Luggage/SpawnContainer/AreaGreen" unique_id=834774388]
+visible = false
+position = Vector2(682.5, 233)
+shape = SubResource("RectangleShape2D_e5niq")
+
 [node name="LuggageGenerator" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=1417657117]
 script = ExtResource("31_r8l48")
-item_textures = Array[Texture2D]([ExtResource("16_b7hie"), ExtResource("13_3ucid"), ExtResource("19_r8l48")])
+item_textures = Array[Texture2D]([ExtResource("38_h6ndh"), ExtResource("39_vk8fy"), ExtResource("40_d6dqt"), ExtResource("41_nsioe"), ExtResource("42_krnur"), ExtResource("43_vw5ed"), ExtResource("44_htv0q"), ExtResource("45_m1rvv"), ExtResource("46_1f5gu"), ExtResource("47_54t5d"), ExtResource("48_dhwip"), ExtResource("49_dasqe"), ExtResource("50_yvmmo"), ExtResource("51_5kvcd"), ExtResource("52_o5aqn")])
 
 [node name="Objetives" type="Node2D" parent="Canvas/Screens" unique_id=1929488832]
 
 [node name="Docs" type="Node2D" parent="Canvas/Screens" unique_id=734381586]
+script = ExtResource("48_iyc6x")
+
+[node name="Notepad" type="Sprite2D" parent="Canvas/Screens/Docs" unique_id=840429487]
+visible = false
+position = Vector2(698.875, 409.24997)
+scale = Vector2(0.48974606, 0.56591797)
+texture = ExtResource("49_4faro")
+
+[node name="notepad_contain" type="VBoxContainer" parent="Canvas/Screens/Docs" unique_id=1285541324]
+visible = false
+offset_left = 498.0
+offset_top = 246.0
+offset_right = 913.0
+offset_bottom = 510.0
+
+[node name="Label" type="Label" parent="Canvas/Screens/Docs/notepad_contain" unique_id=560821423]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Item Prohibido:"
+
+[node name="Sprite2D" type="Sprite2D" parent="Canvas/Screens/Docs/notepad_contain" unique_id=873196711]
+position = Vector2(40.999985, 90)
+scale = Vector2(0.32795697, 0.30614656)
+texture = ExtResource("46_1f5gu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Canvas/Screens/Docs/notepad_contain" unique_id=413744364]

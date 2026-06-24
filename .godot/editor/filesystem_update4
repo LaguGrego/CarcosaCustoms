@@ -1,0 +1,9 @@
+res://carcosa_customs.tscn
+res://spawn_container.gd
+res://luggage.gd
+res://screen_luggage.gd
+res://Scripts/belonging_spawn_engine.gd
+res://luggage_generator.gd
+res://screen_docs.gd
+res://notepad_collision_shape_2d.gd
+res://docs.gd
