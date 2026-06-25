@@ -27,6 +27,7 @@ class_name BelongingSpawnEngine
 extends RefCounted
 
 
+
 ## Un objeto a colocar dentro del área (equivalente a "Belonging" en Python).
 ##
 ## Soporta dos formas de definir el objeto visual:
@@ -43,14 +44,17 @@ class Belonging:
 	var size: Vector2
 	var position: Vector2
 	var z_index: int
+	var item_code: int
 
 	func _init(
 		area: Rect2,
 		p_size: Vector2,
+		p_item_code: int,
 		p_texture: Texture2D = null,
 		p_scene: PackedScene = null,
-		p_z_index: int =0
+		p_z_index: int = 0,
 	) -> void:
+		item_code = p_item_code
 		texture = p_texture
 		scene = p_scene
 		z_index = p_z_index
@@ -69,6 +73,12 @@ class Belonging:
 	func get_rect() -> Rect2:
 		return Rect2(position, size)
 
+	func is_forbidden(forbidden_ids:Array[int]) -> bool:
+		if item_code in forbidden_ids:
+			return true
+		return false
+		
+		
 	## Crea el nodo visual ya ubicado (Sprite2D para texturas, o la
 	## escena instanciada). El que llama solo necesita add_child().
 	func instantiate_node() -> Node2D:
@@ -183,7 +193,8 @@ static func generate_random_belongings(
 	var attempts := 0
 
 	while created < amount and attempts < max_attempts and grid.occupancy() < max_occupancy:
-		var item_data: Dictionary = item_pool[randi() % item_pool.size()]
+		var item_code:int = randi() % item_pool.size()
+		var item_data: Dictionary = item_pool[item_code]
 
 		var texture: Texture2D = item_data.get("texture")
 		var scene: PackedScene = item_data.get("scene")
@@ -192,7 +203,7 @@ static func generate_random_belongings(
 		if item_size == Vector2.ZERO and texture != null:
 			item_size = Vector2(2,2)
 		
-		var belonging := Belonging.new(area, item_size, texture, scene, created)
+		var belonging := Belonging.new(area, item_size, item_code, texture, scene, created)
 		
 		if grid.can_place(belonging):
 			grid.place(belonging)
@@ -202,3 +213,5 @@ static func generate_random_belongings(
 		attempts += 1
 	
 	return placed
+
+	

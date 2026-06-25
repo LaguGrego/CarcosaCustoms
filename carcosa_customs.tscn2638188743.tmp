@@ -51,8 +51,6 @@
 [ext_resource type="Texture2D" uid="uid://ctn3ehefytpkn" path="res://belongings/patipipa.png" id="50_yvmmo"]
 [ext_resource type="Texture2D" uid="uid://cw017td876run" path="res://belongings/camara.png" id="51_5kvcd"]
 [ext_resource type="Texture2D" uid="uid://pgihph6ab6qh" path="res://belongings/dron.png" id="52_o5aqn"]
-[ext_resource type="Script" uid="uid://c1bbwne6cfoar" path="res://notepad.gd" id="52_vk8fy"]
-[ext_resource type="Script" uid="uid://8usggrddlgd6" path="res://notepad_contain.gd" id="53_d6dqt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydyr5"]
 size = Vector2(152.45374, 132.22504)
@@ -265,8 +263,6 @@ text = "DESAPROBAR"
 script = ExtResource("9_lf0aj")
 
 [node name="Objetives" type="Area2D" parent="World/Interactives" unique_id=460384919]
-
-[node name="Alarm" type="Node2D" parent="World/Interactives" unique_id=1879322911]
 
 [node name="No_Interactives" type="Node2D" parent="World" unique_id=1770633659]
 
@@ -507,7 +503,6 @@ visible = false
 position = Vector2(698.875, 409.24997)
 scale = Vector2(0.48974606, 0.56591797)
 texture = ExtResource("49_4faro")
-script = ExtResource("52_vk8fy")
 
 [node name="notepad_contain" type="VBoxContainer" parent="Canvas/Screens/Docs" unique_id=1285541324]
 visible = false
@@ -515,7 +510,6 @@ offset_left = 498.0
 offset_top = 246.0
 offset_right = 913.0
 offset_bottom = 510.0
-script = ExtResource("53_d6dqt")
 
 [node name="Label" type="Label" parent="Canvas/Screens/Docs/notepad_contain" unique_id=560821423]
 layout_mode = 2

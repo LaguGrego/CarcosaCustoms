@@ -13,6 +13,7 @@ var area: Area2D
 var area_rect: Rect2
 var belongings: Array[BelongingSpawnEngine.Belonging] = []
 var spawned_nodes: Array[Node] = []
+var forbiddens: Array[int]
 
 # Variables para drag
 var dragged_item: Node2D = null
@@ -70,6 +71,16 @@ func _clean_belongings() -> void:
 	dragged_item = null
 
 
+func _get_forbiddens(amount: int) -> Array[int]:
+	var start = randi() % item_textures.size()
+	var rtn: Array[int]
+	for i in range(start,start+amount):
+		var selected = i % item_textures.size()
+		rtn.append(selected)
+		
+	return rtn 
+
+
 func _create_new_belongings() -> void:
 	if item_textures.is_empty():
 		return
@@ -98,6 +109,22 @@ func _create_new_belongings() -> void:
 		add_child(instance)
 		spawned_nodes.append(instance)
 
+func _has_forbidden()->bool:
+	for i in range(belongings.size()):
+		if(belongings[i].is_forbidden(forbiddens)): 
+			return true
+	return false
+
+func _generete_forbiddens(level:int)->void:
+	match level:
+		1:
+			forbiddens = _get_forbiddens(3)
+			print('Objetos Prohibidos: ',forbiddens)
+		_:
+			forbiddens = _get_forbiddens(1)
+
+func get_forbiddens()-> Array[int]:
+	return forbiddens
 
 func _input(event: InputEvent) -> void:
 	if spawned_nodes.is_empty():
