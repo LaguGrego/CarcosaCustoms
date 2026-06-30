@@ -57,9 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://pgihph6ab6qh" path="res://belongings/dron.png" id="52_o5aqn"]
 [ext_resource type="Script" uid="uid://c1bbwne6cfoar" path="res://notepad.gd" id="52_vk8fy"]
 [ext_resource type="Script" uid="uid://8usggrddlgd6" path="res://notepad_contain.gd" id="53_d6dqt"]
-[ext_resource type="Texture2D" uid="uid://dbbc42km32nei" path="res://belongings/document.png" id="55_1f5gu"]
 [ext_resource type="Texture2D" uid="uid://c4dta8j3o3of8" path="res://openedNotepad.png" id="55_vw5ed"]
-[ext_resource type="Script" uid="uid://bbf82a66ctedp" path="res://mini_games.gd" id="60_54t5d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydyr5"]
 size = Vector2(152.45374, 132.22504)
@@ -657,7 +655,7 @@ shape = SubResource("RectangleShape2D_e5niq")
 
 [node name="LuggageGenerator" type="Node2D" parent="Canvas/Screens/Luggage" unique_id=1417657117]
 script = ExtResource("31_r8l48")
-item_textures = Array[Texture2D]([ExtResource("38_h6ndh"), ExtResource("39_vk8fy"), ExtResource("40_d6dqt"), ExtResource("41_nsioe"), ExtResource("42_krnur"), ExtResource("43_vw5ed"), ExtResource("44_htv0q"), ExtResource("45_m1rvv"), ExtResource("46_1f5gu"), ExtResource("47_54t5d"), ExtResource("48_dhwip"), ExtResource("49_dasqe"), ExtResource("50_yvmmo"), ExtResource("51_5kvcd"), ExtResource("52_o5aqn"), ExtResource("55_1f5gu")])
+item_textures = Array[Texture2D]([ExtResource("38_h6ndh"), ExtResource("39_vk8fy"), ExtResource("40_d6dqt"), ExtResource("41_nsioe"), ExtResource("42_krnur"), ExtResource("43_vw5ed"), ExtResource("44_htv0q"), ExtResource("45_m1rvv"), ExtResource("46_1f5gu"), ExtResource("47_54t5d"), ExtResource("48_dhwip"), ExtResource("49_dasqe"), ExtResource("50_yvmmo"), ExtResource("51_5kvcd"), ExtResource("52_o5aqn")])
 
 [node name="Objetives" type="Node2D" parent="Canvas/Screens" unique_id=1929488832]
 
@@ -690,9 +688,6 @@ scale = Vector2(0.32795697, 0.30614656)
 texture = ExtResource("46_1f5gu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Canvas/Screens/Docs/notepad_contain" unique_id=413744364]
-
-[node name="MiniGames" type="Node2D" parent="Canvas/Screens" unique_id=920029716]
-script = ExtResource("60_54t5d")
 
 [connection signal="timeout" from="World/Interactives/Alarm/AlarmTimer" to="World/Interactives/Alarm" method="_on_timer_timeout"]
 [connection signal="timeout" from="World/No_Interactives/Timer_canva/Timer" to="World" method="_on_timer_timeout"]

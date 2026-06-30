@@ -106,6 +106,9 @@ func _create_new_belongings() -> void:
 		if instance == null:
 			continue
 		instance.scale = Vector2(item_scale, item_scale)
+		
+		instance.set_meta("belonging", b)
+		
 		add_child(instance)
 		spawned_nodes.append(instance)
 
@@ -142,6 +145,12 @@ func _input(event: InputEvent) -> void:
 					dragged_item = item
 					drag_offset = item.global_position - event.global_position
 					get_viewport().set_input_as_handled()
+					var belonging: BelongingSpawnEngine.Belonging = item.get_meta("belonging")
+					print("Item code:", belonging)
+					print("Posición:", belonging)
+					if belonging._is_special():
+						$"../../MiniGames"._trigger_minigame(belonging)
+
 					break
 		else:
 			dragged_item = null

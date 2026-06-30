@@ -10,6 +10,7 @@ func _on_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			var imagen = cursor_texture.get_image()
+			$"../../World".set_cursor_type(6)
 			# Calculás el nuevo tamaño al 15%
 			var nuevo_ancho = int(imagen.get_width() * 0.15)
 			var nuevo_alto = int(imagen.get_height() * 0.15)

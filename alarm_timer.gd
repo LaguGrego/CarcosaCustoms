@@ -1,16 +1,14 @@
-extends Node2D
-@onready var countdown := $Timer
+extends Timer
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	countdown.set_wait_time(300)
-	countdown.start()
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-var tiempo := 0.0
+func _process(delta: float) -> void:
+	pass
 
-func _process(delta):
-	tiempo += delta
-	$Label.text = str(round(tiempo))
+func _reset_timer() -> void:
+	set_wait_time(3 + randi() % 6)

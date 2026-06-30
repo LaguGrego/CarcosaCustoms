@@ -70,6 +70,11 @@ class Belonging:
 			randi_range(min_y, max_y)
 		)
 
+	func _is_special() -> bool:
+		if item_code == 15:
+			return true
+		return false
+
 	func get_rect() -> Rect2:
 		return Rect2(position, size)
 
@@ -100,6 +105,71 @@ class Belonging:
 		return node
 
 
+class SpecialBelonging:
+	extends RefCounted
+
+	var allowed: bool
+	var texture: Texture2D
+	var scene: PackedScene
+	var size: Vector2
+	var position: Vector2
+	var z_index: int
+	var item_code: int
+
+
+	func _init(
+		area: Rect2,
+		p_size: Vector2,
+		p_item_code: int,
+		p_texture: Texture2D = null,
+		p_scene: PackedScene = null,
+		p_z_index: int = 0,
+	) -> void:
+		allowed= randi() % 2
+		item_code = p_item_code
+		texture = p_texture
+		scene = p_scene
+		z_index = p_z_index
+		size = Vector2(1,1)
+
+		var min_x := int(area.position.x)
+		var max_x: int = max(min_x, int(area.end.x - p_size.x))
+		var min_y := int(area.position.y)
+		var max_y: int = max(min_y, int(area.end.y - p_size.y))
+		
+		position = Vector2(
+			randi_range(min_x, max_x),
+			randi_range(min_y, max_y)
+		)
+
+	func get_rect() -> Rect2:
+		return Rect2(position, size)
+
+	func is_allowed()->bool:
+		return allowed
+
+		
+	## Crea el nodo visual ya ubicado (Sprite2D para texturas, o la
+	## escena instanciada). El que llama solo necesita add_child().
+	func instantiate_node() -> Node2D:
+		var node: Node2D
+		
+		if texture != null:
+			var sprite := Sprite2D.new()
+			sprite.z_index = z_index
+			sprite.texture = texture
+			sprite.centered = false  # para que calce con la posición calculada
+			node = sprite
+		elif scene != null:
+			node = scene.instantiate()
+		else:
+			push_error("Belonging sin texture ni scene asignados")
+			return null
+
+		node.global_position = position
+		return node
+
+	
 ## Grilla de ocupación (equivalente a "Grid" en Python).
 class SpawnGrid:
 	extends RefCounted
