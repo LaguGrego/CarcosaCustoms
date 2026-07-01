@@ -22,9 +22,11 @@
 [ext_resource type="Texture2D" uid="uid://ci6iwb4vscglx" path="res://T1_lupa_pointer .png" id="13_3ucid"]
 [ext_resource type="Script" uid="uid://cr4agypyn7uly" path="res://alarm.gd" id="13_d6dqt"]
 [ext_resource type="Script" uid="uid://dybyee5sss0ce" path="res://tool_6.gd" id="14_6h4y6"]
+[ext_resource type="Texture2D" uid="uid://b6t67yf5djwl4" path="res://alarm_off.png" id="14_dhwip"]
 [ext_resource type="AudioStream" uid="uid://v53sedr686rk" path="res://Alarm Sound Effect.mp3" id="14_nsioe"]
 [ext_resource type="Script" uid="uid://dq5y02750q4so" path="res://alarm_timer.gd" id="14_vw5ed"]
 [ext_resource type="Texture2D" uid="uid://bo2o0du6wyv13" path="res://Tool6_ph.png" id="15_3ucid"]
+[ext_resource type="Texture2D" uid="uid://wamjqykoluuc" path="res://alarm_on.png" id="15_dasqe"]
 [ext_resource type="Script" uid="uid://bci14dnfooihf" path="res://alarm_button.gd" id="15_krnur"]
 [ext_resource type="Texture2D" uid="uid://bx5olk135326j" path="res://T2_uv_pointer.png" id="16_b7hie"]
 [ext_resource type="Texture2D" uid="uid://3lh3uln0k8eb" path="res://T3_detector_pointer.png" id="19_r8l48"]
@@ -84,7 +86,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_x3msl")
 }],
-"loop": 1,
+"loop": true,
 "name": &"default",
 "speed": 5.0
 }]
@@ -168,6 +170,20 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5730w"]
 size = Vector2(202, 234)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yvmmo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_dhwip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dasqe")
+}],
+"loop": true,
+"name": &"alarm_blink",
+"speed": 120.0
+}]
 
 [sub_resource type="Animation" id="Animation_krnur"]
 length = 0.001
@@ -329,6 +345,14 @@ size = Vector2(389, 342)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e5niq"]
 size = Vector2(417, 370)
 
+[sub_resource type="Animation" id="Animation_5kvcd"]
+resource_name = "alarm_blink"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o5aqn"]
+_data = {
+&"alarm_blink": SubResource("Animation_5kvcd")
+}
+
 [node name="Carcosa Customs" type="Node2D" unique_id=1258786510]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1777674799]
@@ -403,6 +427,11 @@ script = ExtResource("9_lf0aj")
 script = ExtResource("13_d6dqt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="World/Interactives/Alarm" unique_id=633812474]
+position = Vector2(1013.99994, 18.999996)
+rotation = 3.1415927
+scale = Vector2(0.23400486, 0.21637489)
+sprite_frames = SubResource("SpriteFrames_yvmmo")
+animation = &"alarm_blink"
 
 [node name="AlarmTimer" type="Timer" parent="World/Interactives/Alarm" unique_id=1912115995]
 script = ExtResource("14_vw5ed")
@@ -693,6 +722,9 @@ scale = Vector2(0.32795697, 0.30614656)
 texture = ExtResource("46_1f5gu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Canvas/Screens/Docs/notepad_contain" unique_id=413744364]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1039688496]
+libraries/ = SubResource("AnimationLibrary_o5aqn")
 
 [connection signal="timeout" from="World/Interactives/Alarm/AlarmTimer" to="World/Interactives/Alarm" method="_on_timer_timeout"]
 [connection signal="timeout" from="World/No_Interactives/Timer_canva/Timer" to="World" method="_on_timer_timeout"]

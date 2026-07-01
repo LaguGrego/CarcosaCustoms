@@ -1,5 +1,2 @@
-res://minigames/tarjeta_minigame/swipe_area.gd
-res://tarjeta_minigame.tscn
-res://minigames/tarjeta_minigame/card.gd
-res://tarjeta_minigame.gd
-res://wallet.gd
+res://carcosa_customs.tscn
+res://alarm.gd
