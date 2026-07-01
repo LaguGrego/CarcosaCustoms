@@ -132,87 +132,115 @@ script = ExtResource("1_nyagi")
 
 [node name="Wallet" type="TextureRect" parent="." unique_id=762166621]
 layout_mode = 0
-offset_left = 71.0
-offset_top = 17.0
-offset_right = 111.0
-offset_bottom = 57.0
+offset_left = 15.0
+offset_top = -5.0
+offset_right = 358.0
+offset_bottom = 284.0
 texture = ExtResource("1_tej2q")
+expand_mode = 1
 script = ExtResource("2_pioiw")
 
 [node name="Card" type="TextureRect" parent="Wallet" unique_id=2090920804]
 layout_mode = 0
-offset_left = 55.0
-offset_top = 290.0
-offset_right = 260.0
-offset_bottom = 486.0
+offset_left = -24.0
+offset_top = 215.0
+offset_right = 368.0
+offset_bottom = 502.0
 texture = ExtResource("2_xkvo8")
 expand_mode = 1
 script = ExtResource("3_xkvo8")
 
 [node name="Reader" type="TextureRect" parent="." unique_id=1806085139]
 layout_mode = 0
-offset_left = 525.0
-offset_top = 406.0
-offset_right = 845.0
-offset_bottom = 674.0
+offset_left = 365.0
+offset_top = 290.0
+offset_right = 1047.0
+offset_bottom = 812.0
 texture = ExtResource("3_0ow71")
+expand_mode = 1
 
 [node name="Marker2D" type="Marker2D" parent="Reader" unique_id=819828913]
+visible = false
 
 [node name="SwipeArea" type="Area2D" parent="Reader" unique_id=220927880]
 script = ExtResource("5_0ow71")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Reader/SwipeArea" unique_id=1686906722]
-z_index = 6
-position = Vector2(160, 59.5)
+z_index = 13
+position = Vector2(332, 258)
 shape = SubResource("RectangleShape2D_1f5gu")
 
 [node name="SwipeStart" type="Control" parent="Reader/SwipeArea" unique_id=493111079]
 visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_left = 3.0
-offset_top = -400.0
-offset_right = 7.0
-offset_bottom = 315.0
+offset_left = 172.0
+offset_top = -290.0
+offset_right = 176.0
+offset_bottom = 425.0
 
 [node name="SwipeEnd" type="Control" parent="Reader/SwipeArea" unique_id=429007866]
 visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_left = 313.0
-offset_top = -406.0
-offset_right = 317.0
-offset_bottom = 312.0
+offset_left = 490.0
+offset_top = -293.0
+offset_right = 494.0
+offset_bottom = 425.0
 
 [node name="GreenLight" type="ColorRect" parent="Reader" unique_id=1594183377]
 visible = false
 layout_mode = 0
-offset_left = -525.0
-offset_top = -405.0
-offset_right = 757.0
-offset_bottom = 313.0
+offset_left = -369.0
+offset_top = -286.0
+offset_right = 913.0
+offset_bottom = 432.0
 offset_transform_enabled = true
 color = Color(0, 1, 0, 0.5882353)
 
 [node name="RedLight" type="ColorRect" parent="Reader" unique_id=284250138]
 layout_mode = 0
-offset_left = -523.0
-offset_top = -400.0
-offset_right = 756.0
-offset_bottom = 310.0
+offset_left = -367.0
+offset_top = -281.0
+offset_right = 912.0
+offset_bottom = 429.0
 offset_transform_enabled = true
 color = Color(1, 0.101960786, 0, 0.5882353)
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=298187464]
+layout_mode = 0
+offset_left = 554.0
+offset_top = 422.0
+offset_right = 854.0
+offset_bottom = 577.0
+color = Color(0, 0.41568628, 0.18039216, 0.8)
+
 [node name="LabelResult" type="Label" parent="." unique_id=1822272649]
 layout_mode = 0
-offset_left = 601.0
-offset_top = 499.0
-offset_right = 769.0
-offset_bottom = 522.0
+offset_left = 546.0
+offset_top = 413.0
+offset_right = 863.0
+offset_bottom = 590.0
+theme_override_colors/font_color = Color(2.695322e-06, 0.872664, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.3372549, 0.3372549, 0.3372549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
 text = "ESPERANDO LECTURA"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="AudioPlayer" type="AudioStreamPlayer" parent="." unique_id=1888322526]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1962039931]
 libraries/ = SubResource("AnimationLibrary_q64gv")
+
+[node name="Fondo" type="ColorRect" parent="." unique_id=1124650238]
+z_index = -3
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 1279.0
+offset_bottom = 722.0
+mouse_filter = 2
+color = Color(0.19215687, 0.19215687, 0.19215687, 0.7647059)

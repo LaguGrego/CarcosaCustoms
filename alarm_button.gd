@@ -17,3 +17,4 @@ func _button_pressed() -> void:
 		$"../AnimationPlayer".stop()
 		$"../ColorRect".visible = false
 		$"../AlarmTimer"._reset_timer()
+		$"../AnimatedSprite2D".stop()

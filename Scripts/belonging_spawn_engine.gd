@@ -45,6 +45,7 @@ class Belonging:
 	var position: Vector2
 	var z_index: int
 	var item_code: int
+	var special_forbidden: bool
 
 	func _init(
 		area: Rect2,
@@ -59,6 +60,9 @@ class Belonging:
 		scene = p_scene
 		z_index = p_z_index
 		size = Vector2(1,1)
+
+		if (item_code == 15):
+			special_forbidden = ( randi() % 3 ) == 1
 
 		var min_x := int(area.position.x)
 		var max_x: int = max(min_x, int(area.end.x - p_size.x))
@@ -78,10 +82,10 @@ class Belonging:
 	func get_rect() -> Rect2:
 		return Rect2(position, size)
 
-	func is_forbidden(forbidden_ids:Array[int]) -> bool:
+	func is_forbidden(forbidden_ids:Array[int] = []) -> bool:
 		if item_code in forbidden_ids:
 			return true
-		return false
+		return special_forbidden
 		
 		
 	## Crea el nodo visual ya ubicado (Sprite2D para texturas, o la

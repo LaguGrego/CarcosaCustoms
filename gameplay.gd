@@ -11,7 +11,7 @@ func _ready() -> void:
 	$No_Interactives/Timer_canva/Timer.timeout.connect(_on_timer_timeout)
 	luggage_generator._generete_forbiddens(1)
 	notepad.update_forbidden_list(luggage_generator)
-	score = 300000
+	score = 5
 	pass # Replace with function body.
 
 func _update_score(choice : String  = "RECHAZAR") -> void:
@@ -38,3 +38,11 @@ func set_cursor_type(tool_code: int) -> void:
 func _on_timer_timeout() -> void:
 	get_tree().quit()
 	pass
+	
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton \
+	and event.button_index == MOUSE_BUTTON_RIGHT \
+	and event.pressed:
+		print('AAAAAA')
+		set_cursor_type(-1)
+		Input.set_custom_mouse_cursor(null, Input.CURSOR_ARROW)

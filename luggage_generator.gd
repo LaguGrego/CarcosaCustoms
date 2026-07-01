@@ -75,7 +75,7 @@ func _get_forbiddens(amount: int) -> Array[int]:
 	var start = randi() % item_textures.size()
 	var rtn: Array[int]
 	for i in range(start,start+amount):
-		var selected = i % item_textures.size()
+		var selected = i % 14
 		rtn.append(selected)
 		
 	return rtn 

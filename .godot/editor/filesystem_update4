@@ -1,2 +1,11 @@
-res://carcosa_customs.tscn
 res://alarm.gd
+res://carcosa_customs.tscn
+res://alarm_button.gd
+res://luggage_generator.gd
+res://mini_games.gd
+res://Scripts/belonging_spawn_engine.gd
+res://tarjeta_minigame.tscn
+res://tarjeta_minigame.gd
+res://wallet.gd
+res://minigames/tarjeta_minigame/card.gd
+res://gameplay.gd

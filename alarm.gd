@@ -2,7 +2,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$AlarmTimer.set_wait_time(30 + randi() % 30)
+	$AlarmTimer.set_wait_time(30 + randi()% 30)
 	$AlarmTimer.start()
 	$AlarmAudio.set_volume_linear(9)
 	$ColorRect.z_index = 50
@@ -20,7 +20,7 @@ func _on_timer_timeout() -> void:
 	$AnimationPlayer.play("alarm")
 	$AnimatedSprite2D.play("alarm_blink")
 	pass # Replace with function body.
-
+#esto esta al dope
 func _deactivate_alarm() -> void:
 	$AlarmTimer.stop()
 	$AlarmTimer._reset_timer()

@@ -1,13 +1,13 @@
 ColorRect
+Node2D
 Control
-CollisionShape2D
 TextureRect
+CollisionShape2D
 Area2D
 Marker2D
 AnimationPlayer
 AudioStreamPlayer
 Label
-Node2D
 Sprite2D
 Node
 Button
