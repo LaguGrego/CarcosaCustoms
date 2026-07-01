@@ -1,0 +1,218 @@
+[gd_scene format=3 uid="uid://cjh6mxv8hj8us"]
+
+[ext_resource type="Script" uid="uid://c6x8n8hcnlsrt" path="res://tarjeta_minigame.gd" id="1_nyagi"]
+[ext_resource type="Texture2D" uid="uid://y31mjx8q7hs6" path="res://minigames/wallet.png" id="1_tej2q"]
+[ext_resource type="Script" uid="uid://dh6o667f3alew" path="res://wallet.gd" id="2_pioiw"]
+[ext_resource type="Texture2D" uid="uid://cw3xkkfhmd1tt" path="res://minigames/tarjeta90grados.png" id="2_xkvo8"]
+[ext_resource type="Texture2D" uid="uid://d352wegnh4u0f" path="res://minigames/screen.png" id="3_0ow71"]
+[ext_resource type="Script" uid="uid://ca5384ulpc0em" path="res://minigames/tarjeta_minigame/card.gd" id="3_xkvo8"]
+[ext_resource type="Script" uid="uid://bp0hk76oqqub8" path="res://minigames/tarjeta_minigame/swipe_area.gd" id="5_0ow71"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1f5gu"]
+size = Vector2(306, 287)
+
+[sub_resource type="Animation" id="Animation_pioiw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Reader/RedLight:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.101960786, 0, 0.5882353)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Reader/GreenLight:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 0, 0.5882353)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Reader/GreenLight:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Reader/RedLight:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_nyagi"]
+resource_name = "green_flash"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Reader/GreenLight:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 1, 0, 0.5882353), Color(0, 1, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Reader/GreenLight:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_yja8u"]
+resource_name = "red_flash"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Reader/RedLight:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.101960786, 0, 0.5882353), Color(1, 0.101960786, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Reader/RedLight:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q64gv"]
+_data = {
+&"RESET": SubResource("Animation_pioiw"),
+&"green_flash": SubResource("Animation_nyagi"),
+&"red_flash": SubResource("Animation_yja8u")
+}
+
+[node name="CardSwipe" type="Control" unique_id=924033600]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nyagi")
+
+[node name="Wallet" type="TextureRect" parent="." unique_id=762166621]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 17.0
+offset_right = 111.0
+offset_bottom = 57.0
+texture = ExtResource("1_tej2q")
+script = ExtResource("2_pioiw")
+
+[node name="Card" type="TextureRect" parent="Wallet" unique_id=2090920804]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 290.0
+offset_right = 260.0
+offset_bottom = 486.0
+texture = ExtResource("2_xkvo8")
+expand_mode = 1
+script = ExtResource("3_xkvo8")
+
+[node name="Reader" type="TextureRect" parent="." unique_id=1806085139]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 406.0
+offset_right = 845.0
+offset_bottom = 674.0
+texture = ExtResource("3_0ow71")
+
+[node name="Marker2D" type="Marker2D" parent="Reader" unique_id=819828913]
+
+[node name="SwipeArea" type="Area2D" parent="Reader" unique_id=220927880]
+script = ExtResource("5_0ow71")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reader/SwipeArea" unique_id=1686906722]
+z_index = 6
+position = Vector2(160, 59.5)
+shape = SubResource("RectangleShape2D_1f5gu")
+
+[node name="SwipeStart" type="Control" parent="Reader/SwipeArea" unique_id=493111079]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3.0
+offset_top = -400.0
+offset_right = 7.0
+offset_bottom = 315.0
+
+[node name="SwipeEnd" type="Control" parent="Reader/SwipeArea" unique_id=429007866]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 313.0
+offset_top = -406.0
+offset_right = 317.0
+offset_bottom = 312.0
+
+[node name="GreenLight" type="ColorRect" parent="Reader" unique_id=1594183377]
+visible = false
+layout_mode = 0
+offset_left = -525.0
+offset_top = -405.0
+offset_right = 757.0
+offset_bottom = 313.0
+offset_transform_enabled = true
+color = Color(0, 1, 0, 0.5882353)
+
+[node name="RedLight" type="ColorRect" parent="Reader" unique_id=284250138]
+layout_mode = 0
+offset_left = -523.0
+offset_top = -400.0
+offset_right = 756.0
+offset_bottom = 310.0
+offset_transform_enabled = true
+color = Color(1, 0.101960786, 0, 0.5882353)
+
+[node name="LabelResult" type="Label" parent="." unique_id=1822272649]
+layout_mode = 0
+offset_left = 601.0
+offset_top = 499.0
+offset_right = 769.0
+offset_bottom = 522.0
+text = "ESPERANDO LECTURA"
+
+[node name="AudioPlayer" type="AudioStreamPlayer" parent="." unique_id=1888322526]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1962039931]
+libraries/ = SubResource("AnimationLibrary_q64gv")

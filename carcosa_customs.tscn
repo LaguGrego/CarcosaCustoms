@@ -84,7 +84,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_x3msl")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -661,6 +661,9 @@ item_textures = Array[Texture2D]([ExtResource("38_h6ndh"), ExtResource("39_vk8fy
 
 [node name="Objetives" type="Node2D" parent="Canvas/Screens" unique_id=1929488832]
 
+[node name="MiniGames" type="Node2D" parent="Canvas/Screens" unique_id=920029716]
+script = ExtResource("60_54t5d")
+
 [node name="Docs" type="Node2D" parent="Canvas/Screens" unique_id=734381586]
 script = ExtResource("48_iyc6x")
 
@@ -690,9 +693,6 @@ scale = Vector2(0.32795697, 0.30614656)
 texture = ExtResource("46_1f5gu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Canvas/Screens/Docs/notepad_contain" unique_id=413744364]
-
-[node name="MiniGames" type="Node2D" parent="Canvas/Screens" unique_id=920029716]
-script = ExtResource("60_54t5d")
 
 [connection signal="timeout" from="World/Interactives/Alarm/AlarmTimer" to="World/Interactives/Alarm" method="_on_timer_timeout"]
 [connection signal="timeout" from="World/No_Interactives/Timer_canva/Timer" to="World" method="_on_timer_timeout"]
